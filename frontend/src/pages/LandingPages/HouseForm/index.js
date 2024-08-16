@@ -28,7 +28,7 @@ const HouseForm = () => {
         Fencing: false,
         Frontyard: false,
         Parking: '',
-        Garden: false,
+       
         Jacuzzi: false,
         KidsPlayground: false,
         Lawn: false,
@@ -78,10 +78,10 @@ const HouseForm = () => {
         setLoading(true);
         setShowPopup(true);
         setPopupMessage('Please note that this is only a predicted value and not the true price. Calculating...');
-
+    
         const featureNames = [
             'Bedroom', 'Bathroom', 'Floors', 'Year', 'Road Width', 'Area_in_sqft',
-            'Backyard', 'Balcony', 'Fencing', 'Frontyard', 'Parking', 'Garden', 
+            'Backyard', 'Balcony', 'Fencing', 'Frontyard', 'Parking',  
             'Jacuzzi', 'Kids Playground', 'Lawn', 'Modular Kitchen', 'Store Room', 
             'Swimming Pool', 'City_Bhaktapur', 'City_Kathmandu', 'City_Lalitpur', 
             'Face_East', 'Face_North', 'Face_North East', 'Face_North West', 
@@ -90,9 +90,9 @@ const HouseForm = () => {
             'Road Type_ Concrete', 'Road Type_ Gravelled', 'Road Type_ Paved', 
             'Road Type_ Soil Stabilized', 'Road Type_Unknown'
         ];
-
+    
         const featuresArray = new Array(featureNames.length).fill(0);
-
+    
         featuresArray[featureNames.indexOf('Bedroom')] = parseInt(formData.Bedroom) || 0;
         featuresArray[featureNames.indexOf('Bathroom')] = parseInt(formData.Bathroom) || 0;
         featuresArray[featureNames.indexOf('Floors')] = parseInt(formData.Floors) || 0;
@@ -104,7 +104,7 @@ const HouseForm = () => {
         featuresArray[featureNames.indexOf('Fencing')] = formData.Fencing ? 1 : 0;
         featuresArray[featureNames.indexOf('Frontyard')] = formData.Frontyard ? 1 : 0;
         featuresArray[featureNames.indexOf('Parking')] = formData.Parking === 'Type0' ? 1 : (formData.Parking === 'Type1' ? 1 : 0);
-        featuresArray[featureNames.indexOf('Garden')] = formData.Garden ? 1 : 0;
+        
         featuresArray[featureNames.indexOf('Jacuzzi')] = formData.Jacuzzi ? 1 : 0;
         featuresArray[featureNames.indexOf('Kids Playground')] = formData.KidsPlayground ? 1 : 0;
         featuresArray[featureNames.indexOf('Lawn')] = formData.Lawn ? 1 : 0;
@@ -114,21 +114,21 @@ const HouseForm = () => {
         featuresArray[featureNames.indexOf('City_Bhaktapur')] = formData.City === 'City_Bhaktapur' ? 1 : 0;
         featuresArray[featureNames.indexOf('City_Kathmandu')] = formData.City === 'City_Kathmandu' ? 1 : 0;
         featuresArray[featureNames.indexOf('City_Lalitpur')] = formData.City === 'City_Lalitpur' ? 1 : 0;
-
+    
         faceOptions.forEach(option => {
             featuresArray[featureNames.indexOf(option)] = option === formData.Face ? 1 : 0;
         });
-
+    
         roadTypeOptions.forEach(option => {
             featuresArray[featureNames.indexOf(option)] = option === formData.RoadType ? 1 : 0;
         });
-
+    
         if (featuresArray.length !== featureNames.length) {
             console.error(`Feature length mismatch: Expected ${featureNames.length}, got ${featuresArray.length}`);
             setLoading(false);
             return;
         }
-
+    
         try {
             setTimeout(async () => {
                 try {
@@ -136,7 +136,7 @@ const HouseForm = () => {
                         feature_names: featureNames,
                         features: featuresArray
                     });
-
+    
                     setPopupMessage(`The predicted price is Rs ${response.data.prediction}`);
                 } catch (error) {
                     console.error('Error fetching prediction:', error);
@@ -150,7 +150,7 @@ const HouseForm = () => {
             setLoading(false);
         }
     };
-
+    
     return (
         <>
             
@@ -290,10 +290,7 @@ const HouseForm = () => {
                                                 control={<Checkbox checked={formData.Frontyard} onChange={handleChange} name="Frontyard" />}
                                                 label="Frontyard"
                                             />
-                                            <FormControlLabel
-                                                control={<Checkbox checked={formData.Garden} onChange={handleChange} name="Garden" />}
-                                                label="Garden"
-                                            />
+                                            
                                             <FormControlLabel
                                                 control={<Checkbox checked={formData.Jacuzzi} onChange={handleChange} name="Jacuzzi" />}
                                                 label="Jacuzzi"

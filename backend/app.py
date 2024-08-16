@@ -26,51 +26,101 @@ app.logger.addHandler(file_handler)
 app.logger.setLevel(logging.INFO)
 app.logger.info('App startup')
 
-# Load the pre-trained model
-model = joblib.load('xgb_model.pkl')
+# Load the pre-trained model and scaler
+model = joblib.load('model.pkl')
+scaler = joblib.load('scaler.pkl')
+
+# Define the features to be scaled
+numeric_cols = ['Bedroom', 'Bathroom', 'Floors', 'Year', 'RoadWidth', 'Area_in_sqft']
 
 # Define a route for the prediction
+from flask import Flask, request, jsonify
+import numpy as np
+import pickle
+import logging
+from sklearn.preprocessing import MinMaxScaler
+
+app = Flask(__name__)
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+
+# Load model and scaler
+with open('model.pkl', 'rb') as model_file:
+    model = pickle.load(model_file)
+
+with open('scaler.pkl', 'rb') as scaler_file:
+    scaler = pickle.load(scaler_file)
+
+# List of numeric columns used for scaling
+numeric_cols = [
+    'Bedroom', 'Bathroom', 'Floors', 'Year', 'Road Width', 'Area_in_sqft'
+]
+
 @app.route('/api/predict', methods=['POST'])
 def predict():
     try:
         # Get JSON data from the request
         data = request.get_json()
-        feature_names = data.get('feature_names')
+        feature_names = data.get('feature_names')  # Expect feature names in request
         features = data.get('features')
         
-        if len(features) != 38:
-            raise ValueError(f"Expected 38 features, got {len(features)}")
+        if not feature_names:
+            raise ValueError("Feature names are required")
 
-        app.logger.info("Received data: %s", data)
+        if len(features) != len(feature_names):  # Check if features length matches feature names
+            raise ValueError(f"Expected {len(feature_names)} features, got {len(features)}")
+
+        app.logger.info("Received features: %s", features)
         app.logger.info("Feature names: %s", feature_names)
-        app.logger.info("Features: %s", features)
 
-        # Convert the list of features into a NumPy array and reshape it for the model
+        # Convert features to a NumPy array
         features_array = np.array(features, dtype=np.float64).reshape(1, -1)
-        app.logger.info("Features array shape: %s", features_array.shape)
 
-        # Use the model to predict
-        prediction = model.predict(features_array)
+        # Extract the relevant features for scaling
+        features_dict = {name: value for name, value in zip(feature_names, features)}
+        features_to_scale = [features_dict.get(col, 0) for col in numeric_cols]  # Default to 0 if not found
         
-        # Convert prediction to a standard Python float
+        # Convert to NumPy array and reshape
+        features_to_scale_array = np.array(features_to_scale, dtype=np.float64).reshape(1, -1)
+        app.logger.info("Features to scale: %s", features_to_scale)
+
+        # Scale features
+        features_scaled = scaler.transform(features_to_scale_array)
+        app.logger.info("Scaled features: %s", features_scaled)
+
+        # Prepare the final feature array with scaled features
+        final_features = features_array.copy()
+        for i, col in enumerate(numeric_cols):
+            feature_index = feature_names.index(col)
+            final_features[0, feature_index] = features_scaled[0, i]
+        
+        app.logger.info("Final features for prediction: %s", final_features)
+
+        # Make prediction
+        prediction = model.predict(final_features)
         prediction_value = float(prediction[0])
         app.logger.info("Prediction: %f", prediction_value)
 
-        # Return the prediction as a JSON response
+        # Return the prediction
         return jsonify({'prediction': prediction_value})
 
     except Exception as e:
-        app.logger.error("Error in prediction: %s", e)  # Log the error
+        app.logger.error("Error in prediction: %s", e)
         return jsonify({'error': str(e)}), 400
 
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
 # Email configuration
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'  # Replace with your SMTP server
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] = 'certifiedadevi@gmail.com'  # Replace with your email
-app.config['MAIL_PASSWORD'] = 'demodemo'  # Replace with your email password
+app.config['MAIL_USERNAME'] = 'certifiedadevi@gmail.com'
+app.config['MAIL_PASSWORD'] = 'demodemo'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
-app.config['MAIL_DEFAULT_SENDER'] = 'certifiedadevi@gmail.com'  # Replace with your email
+app.config['MAIL_DEFAULT_SENDER'] = 'certifiedadevi@gmail.com'
 
 mail = Mail(app)
 
@@ -102,7 +152,7 @@ def contact():
         return jsonify({'message': 'Message sent successfully'}), 200
 
     except Exception as e:
-        app.logger.error("Error in contact form submission: %s", e)  # Log the error
+        app.logger.error("Error in contact form submission: %s", e)
         return jsonify({'error': str(e)}), 500
 
 # Run the app
