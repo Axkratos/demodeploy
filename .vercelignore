@@ -1,4 +1,4 @@
-# Ignore everything except these files
+# Ignore everything except these filesm
 /*
 !build/
 !package.json
