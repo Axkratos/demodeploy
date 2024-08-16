@@ -137,7 +137,7 @@ const HouseForm = () => {
                         features: featuresArray
                     });
 
-                    setPopupMessage(`The predicted price is $${response.data.prediction}`);
+                    setPopupMessage(`The predicted price is Rs ${response.data.prediction}`);
                 } catch (error) {
                     console.error('Error fetching prediction:', error);
                     setPopupMessage('An error occurred while fetching the prediction.');
