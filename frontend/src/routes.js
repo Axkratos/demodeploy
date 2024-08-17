@@ -2,6 +2,7 @@
 import Home from "layouts/pages/presentation/index"
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
+import Predict from "layouts/pages/landing-pages/HouseForm"
 
 import Support from "layouts/pages/landing-pages/support-us";
 
@@ -27,6 +28,11 @@ const routes = [
     name: "Support",
     route: "/support",
     component: <Support />, // This points to your Support component
+  },
+  {
+    name: "Predict",
+    route: "/predict",
+    component: <Predict />, // This points to your Support component
   },
  
   
