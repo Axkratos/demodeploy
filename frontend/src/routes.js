@@ -28,6 +28,11 @@ const routes = [
     route: "/support",
     component: <Support />, // This points to your Support component
   },
+  {
+    name: "",
+    route: "/support",
+    component: <Support />, // This points to your Support component
+  },
   
 ];
 

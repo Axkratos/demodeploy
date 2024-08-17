@@ -24,7 +24,7 @@ function ContactUs() {
     setStatus('Sending...');
     
     try {
-        const response = await axios.post('http://localhost:5000/api/contact', new URLSearchParams(formData), {
+        const response = await axios.post('https://backenddeploy-1-tjr9.onrender.com/api/contact', new URLSearchParams(formData), {
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
             }

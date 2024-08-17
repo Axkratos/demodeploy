@@ -132,7 +132,7 @@ const HouseForm = () => {
         try {
             setTimeout(async () => {
                 try {
-                    const response = await axios.post('http://localhost:5000/api/predict', {
+                    const response = await axios.post('https://backenddeploy-1-tjr9.onrender.com/api/predict', {
                         feature_names: featureNames,
                         features: featuresArray
                     });
