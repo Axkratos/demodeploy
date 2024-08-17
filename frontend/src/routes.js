@@ -28,11 +28,7 @@ const routes = [
     route: "/support",
     component: <Support />, // This points to your Support component
   },
-  {
-    name: "Predict",
-    route: "/support",
-    component: <Support />, // This points to your Support component
-  },
+ 
   
 ];
 
