@@ -1,11 +1,18 @@
-2024-08-17 10:18:07,489 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
-2024-08-17 10:18:10,312 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
-2024-08-17 10:18:39,596 INFO: Received features: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:74]
-2024-08-17 10:18:39,599 INFO: Feature names: ['Bedroom', 'Bathroom', 'Floors', 'Year', 'Road Width', 'Area_in_sqft', 'Backyard', 'Balcony', 'Fencing', 'Frontyard', 'Parking', 'Jacuzzi', 'Kids Playground', 'Lawn', 'Modular Kitchen', 'Store Room', 'Swimming Pool', 'City_Bhaktapur', 'City_Kathmandu', 'City_Lalitpur', 'Face_East', 'Face_North', 'Face_North East', 'Face_North West', 'Face_South', 'Face_South East', 'Face_South West', 'Face_West', 'Parking_0', 'Parking_1', 'Road Type_ Alley', 'Road Type_ Blacktopped', 'Road Type_ Concrete', 'Road Type_ Gravelled', 'Road Type_ Paved', 'Road Type_ Soil Stabilized', 'Road Type_Unknown'] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:75]
-2024-08-17 10:18:39,602 INFO: Features to scale: [0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:86]
-2024-08-17 10:18:39,608 INFO: Scaled features: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
+2024-08-17 13:04:14,301 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
+2024-08-17 13:04:26,940 INFO: Received features: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:62]
+2024-08-17 13:04:26,940 INFO: Feature names: ['Bedroom', 'Bathroom', 'Floors', 'Year', 'Road Width', 'Area_in_sqft', 'Backyard', 'Balcony', 'Fencing', 'Frontyard', 'Parking', 'Jacuzzi', 'Kids Playground', 'Lawn', 'Modular Kitchen', 'Store Room', 'Swimming Pool', 'City_Bhaktapur', 'City_Kathmandu', 'City_Lalitpur', 'Face_East', 'Face_North', 'Face_North East', 'Face_North West', 'Face_South', 'Face_South East', 'Face_South West', 'Face_West', 'Parking_0', 'Parking_1', 'Road Type_ Alley', 'Road Type_ Blacktopped', 'Road Type_ Concrete', 'Road Type_ Gravelled', 'Road Type_ Paved', 'Road Type_ Soil Stabilized', 'Road Type_Unknown'] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:63]
+2024-08-17 13:04:26,942 INFO: Features to scale: [0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:74]
+2024-08-17 13:04:26,943 INFO: Scaled features: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
+   0.0000000e+00 -2.3140402e-06]] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:78]
+2024-08-17 13:04:26,944 ERROR: Error in prediction: 'RoadWidth' is not in list [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:97]
+2024-08-17 13:05:08,031 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
+2024-08-17 13:05:09,450 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
+2024-08-17 13:05:17,974 INFO: Received features: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:74]
+2024-08-17 13:05:17,975 INFO: Feature names: ['Bedroom', 'Bathroom', 'Floors', 'Year', 'Road Width', 'Area_in_sqft', 'Backyard', 'Balcony', 'Fencing', 'Frontyard', 'Parking', 'Jacuzzi', 'Kids Playground', 'Lawn', 'Modular Kitchen', 'Store Room', 'Swimming Pool', 'City_Bhaktapur', 'City_Kathmandu', 'City_Lalitpur', 'Face_East', 'Face_North', 'Face_North East', 'Face_North West', 'Face_South', 'Face_South East', 'Face_South West', 'Face_West', 'Parking_0', 'Parking_1', 'Road Type_ Alley', 'Road Type_ Blacktopped', 'Road Type_ Concrete', 'Road Type_ Gravelled', 'Road Type_ Paved', 'Road Type_ Soil Stabilized', 'Road Type_Unknown'] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:75]
+2024-08-17 13:05:17,976 INFO: Features to scale: [0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:86]
+2024-08-17 13:05:17,977 INFO: Scaled features: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
    0.0000000e+00 -2.3140402e-06]] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:90]
-2024-08-17 10:18:39,611 INFO: Final features for prediction: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
+2024-08-17 13:05:17,979 INFO: Final features for prediction: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
    0.0000000e+00 -2.3140402e-06  0.0000000e+00  0.0000000e+00
    0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
    0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
@@ -15,60 +22,4 @@
    0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
    0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
    0.0000000e+00]] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:98]
-2024-08-17 10:18:39,620 INFO: Prediction: 10557139.000000 [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:103]
-2024-08-17 11:16:35,930 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
-2024-08-17 11:16:38,661 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
-2024-08-17 11:36:07,865 INFO: Received features: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:74]
-2024-08-17 11:36:07,866 INFO: Feature names: ['Bedroom', 'Bathroom', 'Floors', 'Year', 'Road Width', 'Area_in_sqft', 'Backyard', 'Balcony', 'Fencing', 'Frontyard', 'Parking', 'Jacuzzi', 'Kids Playground', 'Lawn', 'Modular Kitchen', 'Store Room', 'Swimming Pool', 'City_Bhaktapur', 'City_Kathmandu', 'City_Lalitpur', 'Face_East', 'Face_North', 'Face_North East', 'Face_North West', 'Face_South', 'Face_South East', 'Face_South West', 'Face_West', 'Parking_0', 'Parking_1', 'Road Type_ Alley', 'Road Type_ Blacktopped', 'Road Type_ Concrete', 'Road Type_ Gravelled', 'Road Type_ Paved', 'Road Type_ Soil Stabilized', 'Road Type_Unknown'] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:75]
-2024-08-17 11:36:07,868 INFO: Features to scale: [0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:86]
-2024-08-17 11:36:07,874 INFO: Scaled features: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
-   0.0000000e+00 -2.3140402e-06]] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:90]
-2024-08-17 11:36:07,877 INFO: Final features for prediction: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
-   0.0000000e+00 -2.3140402e-06  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00]] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:98]
-2024-08-17 11:36:07,885 INFO: Prediction: 10557139.000000 [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:103]
-2024-08-17 11:36:10,188 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
-2024-08-17 11:43:02,766 INFO: Received features: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:74]
-2024-08-17 11:43:02,767 INFO: Feature names: ['Bedroom', 'Bathroom', 'Floors', 'Year', 'Road Width', 'Area_in_sqft', 'Backyard', 'Balcony', 'Fencing', 'Frontyard', 'Parking', 'Jacuzzi', 'Kids Playground', 'Lawn', 'Modular Kitchen', 'Store Room', 'Swimming Pool', 'City_Bhaktapur', 'City_Kathmandu', 'City_Lalitpur', 'Face_East', 'Face_North', 'Face_North East', 'Face_North West', 'Face_South', 'Face_South East', 'Face_South West', 'Face_West', 'Parking_0', 'Parking_1', 'Road Type_ Alley', 'Road Type_ Blacktopped', 'Road Type_ Concrete', 'Road Type_ Gravelled', 'Road Type_ Paved', 'Road Type_ Soil Stabilized', 'Road Type_Unknown'] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:75]
-2024-08-17 11:43:02,770 INFO: Features to scale: [0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:86]
-2024-08-17 11:43:02,774 INFO: Scaled features: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
-   0.0000000e+00 -2.3140402e-06]] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:90]
-2024-08-17 11:43:02,776 INFO: Final features for prediction: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
-   0.0000000e+00 -2.3140402e-06  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00]] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:98]
-2024-08-17 11:43:02,785 INFO: Prediction: 10557139.000000 [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:103]
-2024-08-17 12:43:05,921 INFO: Received features: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:74]
-2024-08-17 12:43:05,922 INFO: Feature names: ['Bedroom', 'Bathroom', 'Floors', 'Year', 'Road Width', 'Area_in_sqft', 'Backyard', 'Balcony', 'Fencing', 'Frontyard', 'Parking', 'Jacuzzi', 'Kids Playground', 'Lawn', 'Modular Kitchen', 'Store Room', 'Swimming Pool', 'City_Bhaktapur', 'City_Kathmandu', 'City_Lalitpur', 'Face_East', 'Face_North', 'Face_North East', 'Face_North West', 'Face_South', 'Face_South East', 'Face_South West', 'Face_West', 'Parking_0', 'Parking_1', 'Road Type_ Alley', 'Road Type_ Blacktopped', 'Road Type_ Concrete', 'Road Type_ Gravelled', 'Road Type_ Paved', 'Road Type_ Soil Stabilized', 'Road Type_Unknown'] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:75]
-2024-08-17 12:43:05,947 INFO: Features to scale: [0, 0, 0, 0, 0, 0] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:86]
-2024-08-17 12:43:05,950 INFO: Scaled features: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
-   0.0000000e+00 -2.3140402e-06]] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:90]
-2024-08-17 12:43:05,951 INFO: Final features for prediction: [[ 0.0000000e+00  0.0000000e+00  0.0000000e+00 -2.5974026e+01
-   0.0000000e+00 -2.3140402e-06  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00  0.0000000e+00  0.0000000e+00  0.0000000e+00
-   0.0000000e+00]] [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:98]
-2024-08-17 12:43:05,960 INFO: Prediction: 10557139.000000 [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:103]
-2024-08-17 12:47:28,506 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
-2024-08-17 12:47:35,389 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
-2024-08-17 12:48:41,289 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
-2024-08-17 12:51:19,584 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
-2024-08-17 12:51:20,913 INFO: App startup [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:27]
+2024-08-17 13:05:17,984 INFO: Prediction: 10557139.000000 [in C:\Users\anupa\OneDrive\Desktop\house-pred2\Price-prediction\backend\app.py:103]
