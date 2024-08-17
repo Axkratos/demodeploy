@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.js": "/demodeploy/static/js/main.5d4513e2.js",
+    "static/media/rotating-card-bg-front.jpeg": "/demodeploy/static/media/rotating-card-bg-front.bdcdfadc0dacb9bc5f23.jpeg",
+    "static/media/bg-presentation.jpg": "/demodeploy/static/media/bg-presentation.889630297390d27e8dfb.jpg",
+    "static/media/rotating-card-bg-back.jpeg": "/demodeploy/static/media/rotating-card-bg-back.183088de91adb283a9ae.jpeg",
+    "static/media/illustration-reset.jpg": "/demodeploy/static/media/illustration-reset.c5f36c0c2262b9ad6165.jpg",
+    "static/media/anup3.jpg": "/demodeploy/static/media/anup3.75d0ced2ae69ef27eae1.jpg",
+    "static/media/bg-about-us.jpg": "/demodeploy/static/media/bg-about-us.cf9a123e2a3d371d53da.jpg",
+    "static/media/qr-code.jpg": "/demodeploy/static/media/qr-code.2d6c07fa048e03ef23b0.jpg",
+    "static/media/team-1.jpg": "/demodeploy/static/media/team-1.0fd36e0ee93dcfacdef8.jpg",
+    "index.html": "/demodeploy/index.html",
+    "main.5d4513e2.js.map": "/demodeploy/static/js/main.5d4513e2.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.5d4513e2.js"
+  ]
+}
